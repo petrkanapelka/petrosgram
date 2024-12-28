@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TestComponent } from './test/test.component';
-import { Test2Component } from './test2/test2.component';
-
+interface IUser {
+  age: number;
+  name: string;
+}
 @Component({
   selector: 'app-root',
-  imports: [TestComponent, Test2Component],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'petrosgram';
+  appTitle = 'petrosgram';
+
+  user: IUser = {
+    age: 32,
+    name: 'Petro',
+  };
 }
